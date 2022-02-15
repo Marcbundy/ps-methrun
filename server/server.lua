@@ -7,7 +7,7 @@ RegisterServerEvent('ps-methrun:server:startr', function()
 
 	if player.PlayerData.money['cash'] >= Config.RunCost then
 		player.Functions.RemoveMoney('cash', Config.RunCost)
-        Player.Functions.AddItem("casekey", 1)
+        player.Functions.AddItem("casekey", 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["casekey"], "add")
 		TriggerClientEvent("ps-methrun:server:runactivate", source)
 	else
